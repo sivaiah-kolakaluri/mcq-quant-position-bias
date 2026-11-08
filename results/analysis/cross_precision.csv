@@ -1,0 +1,13 @@
+benchmark,compare,scoring,n_models,tau,ci_low,ci_high
+arc,16bit_vs_int8,original_order,7,1.0,0.8095238095238096,1.0
+arc,16bit_vs_int8,avg_all_shifts,7,1.0,0.9047619047619049,1.0
+arc,16bit_vs_nf4,original_order,7,0.8095238095238096,0.6831300510639733,1.0
+arc,16bit_vs_nf4,avg_all_shifts,7,0.9047619047619049,0.7142857142857143,1.0
+gpqa,16bit_vs_int8,original_order,7,0.8783100656536799,0.4285714285714286,1.0
+gpqa,16bit_vs_int8,avg_all_shifts,7,0.9047619047619049,0.5238095238095238,1.0
+gpqa,16bit_vs_nf4,original_order,7,0.7807200583588265,0.4285714285714286,1.0
+gpqa,16bit_vs_nf4,avg_all_shifts,7,0.7142857142857143,0.23809523809523814,0.9047619047619049
+mmlu_pro,16bit_vs_int8,original_order,7,1.0,0.7142857142857143,1.0
+mmlu_pro,16bit_vs_int8,avg_all_shifts,7,1.0,0.9047619047619049,1.0
+mmlu_pro,16bit_vs_nf4,original_order,7,1.0,0.7142857142857143,1.0
+mmlu_pro,16bit_vs_nf4,avg_all_shifts,7,1.0,0.8095238095238096,1.0

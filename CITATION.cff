@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "Beyond Accuracy: How 8-bit and 4-bit Quantization Change Position Bias and Answer Consistency in Multiple-Choice LLM Evaluation"
+authors:
+  - family-names: Kolakaluri
+    given-names: Sivaiah
+year: 2026
+# The arXiv identifier will be added here once the paper is posted, e.g.
+# identifiers:
+#   - type: other
+#     value: "arXiv:XXXX.XXXXX"
+repository-code: "https://github.com/sivaiah-kolakaluri/mcq-quant-position-bias"
+license: MIT

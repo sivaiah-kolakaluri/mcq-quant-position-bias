@@ -1,0 +1,13 @@
+# Analysis (CPU)
+pandas>=2.2
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+# Evaluation (GPU); versions recorded in the Colab session were transformers 5.22.0 and
+# bitsandbytes 0.50.2 (see docs/REPRODUCIBILITY.md)
+torch
+transformers>=5.22
+accelerate
+bitsandbytes>=0.50
+datasets
+tqdm
