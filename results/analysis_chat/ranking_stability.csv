@@ -1,0 +1,10 @@
+benchmark,precision,n_models,mean_tau_original_vs_fixed_pos,ci_low,ci_high,splithalf_tau
+arc,16bit,2,1.0,1.0,1.0,1.0
+arc,int8,2,1.0,1.0,1.0,1.0
+arc,nf4,2,1.0,1.0,1.0,1.0
+gpqa,16bit,2,0.5,-0.5,0.5,0.996
+gpqa,int8,2,0.0,,,0.96996996996997
+gpqa,nf4,2,1.0,0.5,1.0,0.995995995995996
+mmlu_pro,16bit,2,1.0,0.6,1.0,1.0
+mmlu_pro,int8,2,1.0,0.6,1.0,1.0
+mmlu_pro,nf4,2,1.0,0.8,1.0,1.0

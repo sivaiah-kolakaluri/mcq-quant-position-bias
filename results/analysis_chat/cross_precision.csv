@@ -1,0 +1,13 @@
+benchmark,compare,scoring,n_models,tau,ci_low,ci_high
+arc,16bit_vs_int8,original_order,2,1.0,1.0,1.0
+arc,16bit_vs_int8,avg_all_shifts,2,1.0,1.0,1.0
+arc,16bit_vs_nf4,original_order,2,1.0,1.0,1.0
+arc,16bit_vs_nf4,avg_all_shifts,2,1.0,1.0,1.0
+gpqa,16bit_vs_int8,original_order,2,1.0,1.0,1.0
+gpqa,16bit_vs_int8,avg_all_shifts,2,1.0,1.0,1.0
+gpqa,16bit_vs_nf4,original_order,2,1.0,1.0,1.0
+gpqa,16bit_vs_nf4,avg_all_shifts,2,1.0,1.0,1.0
+mmlu_pro,16bit_vs_int8,original_order,2,1.0,1.0,1.0
+mmlu_pro,16bit_vs_int8,avg_all_shifts,2,1.0,1.0,1.0
+mmlu_pro,16bit_vs_nf4,original_order,2,1.0,1.0,1.0
+mmlu_pro,16bit_vs_nf4,avg_all_shifts,2,1.0,1.0,1.0

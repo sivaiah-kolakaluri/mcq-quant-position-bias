@@ -71,5 +71,14 @@ The retry only changes how prompts are grouped into batches, not the prompts or 
   before round-half-up, so that values stored as e.g. 0.5499999999999999 (exactly 0.55) round to
   0.6 as intended.
 
+## Chat-template sensitivity check (pre-registered)
+- Plan: `docs/PREREGISTRATION_chat_template.md`, pushed to GitHub on Nov 8, 2026 (23:46 UTC) before
+  any run; implementation note (pinned date in SmolLM3's template) and a background correction were
+  added on Nov 9 before the full run's results were seen.
+- Runs: Kaggle, Nov 9, 2026, 2x T4, batch size 8, `src/eval_position_bias_chat.py`; versions in
+  `results/chat_template/versions_chat.txt` (same as rerun session 2). All 18 files have the full
+  set of prompts, identical to the main runs' prompts.
+- Analysis: `analyze.py` on the 18 files as their own set, then `chat_template_checks.py`.
+
 ## Not done
 - No GPTQ or AWQ runs (planned for a later version).
