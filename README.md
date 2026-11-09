@@ -29,6 +29,7 @@ rotations of its options, so the correct answer appears once in every position
 | `analysis/make_tables.py`, `figs.py`, `figs2.py` | Paper tables (LaTeX) and figures |
 | `analysis/gen_numbers.py` | Writes every number quoted in the paper text as a LaTeX macro |
 | `analysis/data_checks.py`, `dtype_check.py` | Completeness and sanity checks; checks that the stored values are consistent with bfloat16 in every run |
+| `analysis/tie_policy_check.py` | Recomputes all changes with first-letter tie-breaking and compares their direction (robustness check) |
 | `analysis/numerical_baseline.py` | Repeated 16-bit run vs original: flips, tie-only floor, and a placebo test of the paper's bootstrap |
 | `results/rerun16_bs8/` | 21 repeated 16-bit runs at batch size 8 (numerical baseline), same columns, plus the package versions of both sessions |
 | `results/per_prompt/` | 63 CSVs, one per run (columns below; full description in `results/README.md`) |
@@ -79,6 +80,7 @@ python analysis/make_tables.py results/analysis tables/
 python analysis/figs.py results/per_prompt results/analysis figures/
 python analysis/figs2.py results/analysis figures/
 python analysis/numerical_baseline.py results/per_prompt results/rerun16_bs8 results/analysis
+python analysis/tie_policy_check.py results/per_prompt results/analysis
 python analysis/gen_numbers.py results/analysis numbers.tex
 ```
 

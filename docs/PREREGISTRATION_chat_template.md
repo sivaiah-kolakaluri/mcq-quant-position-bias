@@ -55,6 +55,11 @@ A 5-question smoke test (ARC-Challenge, 16-bit, both models) confirmed that thin
 date into the prompt. To make every run see identical text, the date is pinned to
 "08 November 2026". The smoke-test outputs are not used in any analysis.
 
+## Correction (added Nov 9, 2026, before any full-run result was seen)
+The "Why" section above gives the other five models' letter mass as "40-92%". That was wrong. The
+correct figures are 71-99% as per-model medians (the measure in the paper's Appendix Table 4), and
+40-100% across individual runs. This background figure does not affect the design or the checks.
+
 ## Not part of this check
 No repeated-run baseline is made for the chat template, the other five models are not rerun,
 and no other prompt variants are tried.

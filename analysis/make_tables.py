@@ -18,7 +18,7 @@ cons = {(r.benchmark, r.model, r.precision): r.consistency for _, r in pm.iterro
 flips = {(r.benchmark, r.model, r.quant): r.flip_rate for _, r in fl.iterrows()}
 # Table 2: summary (mean over 7 models)
 L = [r"\begin{table}[t]", r"\centering", r"\small", r"\begin{tabular}{llrrrr}", r"\toprule",
-     r"Benchmark & Precision & Accuracy (\%) & RStd $\downarrow$ & Consistency (\%) & Flips (\%) \\", r"\midrule"]
+     r"Benchmark & Precision & Accuracy (\%) & RStd $\downarrow$ & Consistency (\%) & Corr.\ flips (\%) \\", r"\midrule"]
 for b in B:
     for i, p in enumerate(P):
         t = pm[(pm.benchmark == b) & (pm.precision == p)]
@@ -27,7 +27,7 @@ for b in B:
         L.append(f"{B[b] if i == 0 else ''} & {P[p]} & {h(acc)} & {h(rs)} & {h(co)} & {f} \\\\")
     if b != "mmlu_pro": L.append(r"\midrule")
 L += [r"\bottomrule", r"\end{tabular}",
-      r"\caption{Summary, averaged over the seven models. RStd is position bias in accuracy points (lower is better); consistency is the share of questions answered with the same option content under every rotation; flips are the share of identical prompts whose correctness differs from the 16-bit model.}",
+      r"\caption{Summary, averaged over the seven models. RStd is position bias in accuracy points (lower is better); consistency is the share of questions answered with the same option content under every rotation; correctness flips are the share of identical prompts whose correctness differs from the 16-bit model.}",
       r"\label{tab:summary}", r"\end{table}"]
 open(f"{out}/tab_summary.tex", "w").write("\n".join(L) + "\n")
 # Appendix table: per-model accuracy / RStd / consistency
