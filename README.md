@@ -39,6 +39,7 @@ rotations of its options, so the correct answer appears once in every position
 | `results/analysis/` | Analysis outputs used in the paper |
 | `results/figures/` | Paper figures (PDF and PNG) |
 | `docs/PREREGISTRATION_chat_template.md` | Pre-registered plan for the chat-template sensitivity check (written before any of those runs) |
+| `docs/DECISION_LOG.md` | The main scientific and methodological decisions, in order, with reasons (including deviations from the original plan) |
 | `docs/REPRODUCIBILITY.md` | Environment, run history, exact settings, known deviations |
 
 Per-prompt columns: `model, precision, benchmark, qid, subject, shift, correct_pos, pred_pos,
