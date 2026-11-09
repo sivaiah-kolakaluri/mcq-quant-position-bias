@@ -18,6 +18,7 @@ import argparse
 import json
 import math
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -32,6 +33,9 @@ def build_chat_prompt(tok, question, choices):
     user = plain[: -len("\nAnswer:")]
     text = tok.apply_chat_template([{"role": "user", "content": user}], tokenize=False,
                                    add_generation_prompt=True, enable_thinking=False)
+    # SmolLM3's template writes the current date into the prompt; pin it so every run sees the
+    # same text (date of the pre-registration and smoke test)
+    text = re.sub(r"Today Date: \d{1,2} \w+ \d{4}", "Today Date: 08 November 2026", text)
     return text + "Answer:"
 
 

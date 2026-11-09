@@ -48,6 +48,13 @@ a check fails, the paper's claims for these two models will be narrowed accordin
 cannot be completed within the GPU budget, that is reported, and the remaining runs are
 analysed as planned.
 
+## Implementation note (added Nov 9, 2026, after the smoke test and before the full run)
+A 5-question smoke test (ARC-Challenge, 16-bit, both models) confirmed that thinking is disabled
+(an empty `<think></think>` block precedes `Answer:`) and that the median letter mass is 0.987
+(Qwen3.5-4B) and 0.981 (SmolLM3-3B). It also showed that SmolLM3's template writes the current
+date into the prompt. To make every run see identical text, the date is pinned to
+"08 November 2026". The smoke-test outputs are not used in any analysis.
+
 ## Not part of this check
 No repeated-run baseline is made for the chat template, the other five models are not rerun,
 and no other prompt variants are tried.
